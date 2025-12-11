@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FastAPI Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome, {{ user.preferred_username }}</h2>
+        <p>This is a secure page protected by Keycloak JWT!</p>
+        {% if 'admin' in user.realm_access.roles %}
+            <a href="/admin">Admin Page</a> |
+        {% endif %}
+        <a href="/logout">Logout</a>
+    </div>
+</body>
+</html>
