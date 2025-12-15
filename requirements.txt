@@ -1,0 +1,6 @@
+fastapi[all]
+jinja2
+python-jose[cryptography]
+requests
+uvicorn
+python-multipart
